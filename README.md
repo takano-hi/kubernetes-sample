@@ -2,8 +2,8 @@
 
 ```sh
 $ minikube start
+$ kuberctl apply -f kubernetes/
 $ eval (minikube -p minikube docker-env)
-$ kubectl apply -f web/deployment.yml
-$ kubectl apply -f web/service.yml
-$ minikube service kubernetes-sample-service --url
+$ kubectl apply -f web/kubernetes/
+$ minikube service kubernetes-sample-service --url -n kubernetes-sample
 ```
